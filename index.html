@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Meu Curriculo Online</title>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Coda&family=Cormorant+SC&display=swap');
+		body{
+			background-image: url(img/image1.jpg);
+			margin: 0px;
+			padding: 0px;
+		}
+		place-holder{
+			font-family: 'Coda';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 24px;
+		}
+		#titulo{
+			font-family: 'Coda';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 34px;
+			color: black;
+			margin: 10px;
+			color: white;
+		}
+		#navbar{
+			padding: 5px;
+			margin: 0px;
+			width: 221,5vh;
+			height: 90px;
+			top: 15px;
+			left: 0px;
+			opacity: 78%;
+			background: #00C8DE;
+		}
+		h1{
+			text-align: center;
+			font-family: 'Cormorant SC';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 36px;
+			line-height: 44px;
+			color: #FFFFFF;
+		}
+		h2{
+			text-align: center;
+			color: white;
+		}
+		.nomePrench{
+			width: 356px;
+			height: 29px;
+			left: 132px;
+			top: 179px;
+			background: #FFFFFF;
+		}
+		
+		.nome{
+			margin: 10px;
+			font-family: 'Coda';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 34px;
+			color: white;
+		}
+		.idadePrench{
+			width: 356px;
+			height: 29px;
+			left: 132px;
+			top: 225px;
+			background: #FFFFFF;
+		}
+		.idade{
+			margin: 10px;
+			font-family: 'Coda';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 34px;
+			color: white;
+		}
+		.enderecoPrench{
+			width: 317px;
+			height: 29px;
+			left: 171px;
+			top: 276px;
+			background: #FFFFFF;
+		}
+		.endereco{
+			margin: 10px;
+			font-family: 'Coda';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 34px;
+			color: #FFFFFF;
+		}
+		.escolaridadePrench{
+			width: 14px;
+			height: 14px;
+			left: 53px;
+			top: 385px;
+			position:absolute;
+		}
+		.escolaridade{
+			margin: 10px;
+			width: 139px;
+			height: 34px;
+			left: 53px;
+			top: 328px;
+			font-family: 'Coda';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 34px;
+			color: #FFFFFF;
+		}
+		.escolaridade1{
+			font-family: 'Coda';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 12px;
+			color: #00C8DE;
+
+		}
+		ul{
+			width: 600px;
+			list-style-type: none;
+			columns: 3;
+		}
+		#b1{
+			font-family: 'Coda';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 34px;
+			color: red;		
+		}
+		#b2{
+			font-family: 'Coda';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 34px;
+			color: red;
+		}
+		#b3{
+			font-family: 'Coda';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 34px;
+			color: red;
+		}
+		#b4{
+			font-family: 'Coda';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 34px;
+			color: red;
+		}
+		textarea{
+			margin: 50px;
+			width: 650px;
+			height: 200px;
+		}
+		button{
+			width: 316px;
+			height: 43px;
+			left: 221px;
+			top: 1684px;
+			background: #39124B;
+			color: white;
+			font-family: 'Coda';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 34px;
+			text-align: center;
+		}
+		.n1{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div id="navbar">
+		<h1>Curriculum Online</h1>
+	</div>
+	<form method="POST" action="curriculo.php">
+		<h2 id="titulo">Insira Seus Dados</h2>
+		<label required for="nome" class="nome">Nome: </label>
+		<input type="text" name="nome" class="nomePrench">
+		<b id="b1">*</b>
+		<br>
+		<label required for="idade" class="idade">Idade: </label>
+		<input type="text" name="idade" class="idadePrench">
+		<b id="b2">*</b>
+		<br>
+		<label required for="endereco" class="endereco">Endereço: </label>
+		<input type="text" name="endereco" class="enderecoPrench">
+		<b id="b3">*</b>
+		<br>
+		<label required for="escolaridade" class="escolaridade">Escolaridade: </label>
+		<b id="b4">*</b>
+		<br>
+		<ul>
+			<li>
+				<input type="radio" name="escolaridade">
+				<label for="escolaridade" class="escolaridade1">Analfabeto</label>
+			</li>
+			<li>
+				<input type="radio" name="escolaridade">
+				<label for="escolaridade" class="escolaridade1">Médio - Incompleto</label>
+			</li>
+			<li>
+				<input type="radio" name="escolaridade">
+				<label for="escolaridade" class="escolaridade1">Superior</label>
+			</li>
+			<li>
+				<input type="radio" name="escolaridade">
+				<label for="escolaridade" class="escolaridade1">Fundamental - Incompleto</label>
+			</li>
+			<li>
+				<input type="radio" name="escolaridade">
+				<label for="escolaridade" class="escolaridade1">Médio</label>
+			</li>
+			<li>
+				<input type="radio" name="escolaridade">
+				<label for="escolaridade" class="escolaridade1">Pós</label>
+			</li>
+			<li>
+				<input type="radio" name="escolaridade">
+				<label for="escolaridade" class="escolaridade1">Fundamental</label>
+			</li>
+			<li>
+				<input type="radio" name="escolaridade">
+				<label for="escolaridade" class="escolaridade1">Superior - Incompleto</label>
+			</li>
+			<li>
+				<input type="radio" name="escolaridade">
+				<label for="escolaridade" class="escolaridade1">Doutorado</label>
+			</li>
+		</ul>
+		<label for="objetivo" class="escolaridade">Objetivo: </label>
+		<b id="b4">*</b><br>
+		<textarea required placeholder="Digite Seu Objetivo de Forma Clara e Direta"></textarea>
+		<br>
+		<label for="experiencia" class="escolaridade">Experiência: </label>
+		<b id="b4">*</b><br>
+		<textarea required placeholder="Exemplo: Estúdio de Design Tipográfico 
+Designer Gráfico Júnior 
+• Encarregada de fazer imagens para layouts offline e online. 
+• Editei fotos para clientes, revistas e posts de redes sociais. 
+• Organização de arquivos."></textarea><br>
+		<label for="cursos" class="escolaridade">Cursos e Certificados: </label>
+		<br>
+		<textarea placeholder=""></textarea>
+		<br>
+		<label for="habilidade" class="escolaridade">Habilidade: </label>
+		<br>
+		<textarea placeholder=""></textarea>
+		<h2 id="titulo">Contato</h2>
+		<label for="email" class="nome">Email: </label>
+		<input type="text" name="nome" class="nomePrench">
+		<br>
+		<label required for="telefone" class="idade">Telefone: </label>
+		<input type="text" name="idade" class="enderecoPrench">
+		<b id="b2">*</b>
+		<br>
+		<label for="site" class="endereco">Site: </label>
+		<input type="text" name="endereco" class="nomePrench">
+		<br>
+		<br>
+		<div class="n1">
+			<button>Concluir</button>
+		</div>
+	</form>
+</body>
+</html>
