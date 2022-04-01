@@ -1,59 +1,78 @@
+<?php
+if ($_POST) {
+    // code...
+    $dados = array(
+    'nome' => $_POST['nome'],
+    'idade' => $_POST['idade'],
+    'endereco' => $_POST['endereco'],
+    'objetivo' => $_POST['objetivo'],
+    'telefone' => $_POST['telefone'],
+    'email' => $_POST['email'],
+    'escolaridade' => $_POST['escolaridade'],
+);
+}
+$habilidade = (isset($_POST['habilidade'])) ? $_POST['habilidade'] : "";
+$cursos = (isset($_POST['cursos'])) ? $_POST['cursos'] : "";
+$site = (isset($_POST['site'])) ? $_POST['site'] : "";
+$experiencia = (isset($_POST['experiencia'])) ? $_POST['experiencia'] : "";
+?>
 <!DOCTYPE html>
-<html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Curriculo</title>
-	<style type="text/css">
-		@import url('https://fonts.googleapis.com/css2?family=Coda&family=Cormorant+SC&family=Raleway&display=swap');
-		@import url('https://fonts.googleapis.com/css2?family=Coda&family=Cormorant+SC&family=Lora&family=Raleway&display=swap');
-		.retangulo{
-			display: block;
-			margin-left: auto;
-			margin-right: auto;
-			position: relative;
-			width: 291px;
-			height: 24px;
-			background: rgba(161, 227, 172, 0.42);
-		}
-		.nome{
-			position: absolute;
-			top: 0%;
-			/*left:50%;*/
-			font-family: 'Raleway';
-			font-style: normal;
-			font-weight: 400;
-			font-size: 24px;
-			line-height: 128.9%;
-			display: flex;
-			justify-content: center;
-			text-align: center;
-			letter-spacing: 0.365em;
-			text-indent: 1px;
-
-			color: #000000;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <title>Currículo</title>
+    <link rel="stylesheet" type="text/css" href="css/modelo1.css">
 </head>
 <body>
-	
-		
-	
+    <main>
+        <section class="lateral">
+            <h1><?= $dados['nome'];?></h1>
+            <h3>Idade: <?= $dados['idade'];?></h3>
+            <h3>Escolaridade: <?= $dados['escolaridade'];?></h3>
+        </section>
+        <section class="principal">
+            <h2>Objetivo</h2>            
+            <p><?= $dados['objetivo']; ?></p>           
+            <h2>Formação</h2>
+            <p><?= $cursos; ?></p>
+            <h2>Experiência</h2>
+            <p><?= $experiencia; ?></p>         
+            <h2>Contato</h2>
+            <ul class="lista-topicos">
+                <li>
+                    <div>
+                        <h4>Endereço:</h4>
+                        <p><?= $dados['endereco']; ?></p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div>
+                            <h4>Telefone:</h4>
+                            <p><?= $dados['telefone']; ?></p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div>
+                            <h4>Email:</h4>
+                            <p><?= $dados['email']; ?></p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div>
+                            <h4>Site:</h4>
+                            <p><?= $site; ?></p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <script>
+        window.print();
+    </script>
 </body>
 </html>
-<?php
-/*if ($_POST) {
-	$nome = $_POST['nome']
-	$idade = $_POST['idade']
-	$endereco = $_POST['endereco']
-	$escolaridade = $_POST['escolaridade']
-	$objetivo = $_POST['objetivo']
-	$experiencia = $_POST['experiencia']
-	$cursos = isset($_POST['cursos'])?
-	$habilidade = isset($_POST['habilidade'])?
-	$email = isset($_POST['email'])?
-	$telefone = $_POST['telefone']
-	$site = isset($_POST['site'])?*/
-	echo "<div class=\"retangulo\"><h1 class = 'nome'>Alison Bruno </h1></div>";
-/*}*/
-?>
